@@ -31,6 +31,20 @@ struct ContentView: View {
                         
                         CategoryGridView()
                         
+                        TitleView(title: "Helmet")
+                        
+                        LazyVGrid(columns: gridLayout, spacing: 15, content: {
+                            ForEach(products) { product in
+                                ProductItemView(product: product)
+                            }//: ForEach
+                        })//: LazyVGrid
+                        .padding(.horizontal, 15)
+                        .padding(.bottom, 15)
+                        
+                        TitleView(title: "Brand")
+                        
+                        BrandGridView()
+                        
                         FooterView()
                             .padding(.horizontal)
                     }//: VStack
