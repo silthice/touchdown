@@ -17,6 +17,10 @@ struct Product: Identifiable, Codable {
     
     var formattedPrice: String { return "$\(price)"}
     
+    var red: Double { return color[0] }
+    var green: Double { return color[1] }
+    var blue: Double { return color[2] }
+    
     var rgbColor: Color {
         return Color(red: color[0], green: color[1], blue: color[2])
     }
